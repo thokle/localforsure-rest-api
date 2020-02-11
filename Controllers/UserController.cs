@@ -16,7 +16,7 @@ public class UserController : Controller
     [HttpGet]
     public IEnumerable<string> Get()
     {
-        return new string[] { "value1", "value2" };
+        return new string[] { "User1", "User2" };
     }
 
     // GET api/<controller>/5
