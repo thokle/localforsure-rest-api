@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using localforsure_rest_api.daos;
+using localforsure_rest_api.models;
+using localforsure_rest_api.services;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,24 +15,34 @@ namespace localforsure_rest_api.Controllers
 [Route("api/[controller]")]
 public class UserController : Controller
 {
+    private UserService _dao;
+
+    public UserController()
+    {
+        _dao = new UserService();
+    }
+
     // GET: api/<controller>
     [HttpGet]
-    public IEnumerable<string> Get()
+    public IEnumerable<User> Get()
     {
-        return new string[] { "User1", "User2" };
+        return _dao.GetAllUsers();
+
     }
 
     // GET api/<controller>/5
     [HttpGet("{id}")]
-    public string Get(int id)
+    public User Get(int id)
     {
-        return "value";
+        return new User() {};
     }
 
     // POST api/<controller>
     [HttpPost]
     public void Post([FromBody]string value)
     {
+        //_dao.CreateUser(new User()
+       
     }
 
     // PUT api/<controller>/5
