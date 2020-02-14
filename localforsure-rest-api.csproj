@@ -15,8 +15,6 @@
     <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\data-soruce\data-soruce.csproj" />
-  </ItemGroup>
+
 
 </Project>
