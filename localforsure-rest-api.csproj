@@ -17,6 +17,12 @@
     <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="data-soruce-mil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>lib\data-soruce-mil.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 
 
 
