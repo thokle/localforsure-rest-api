@@ -5,8 +5,7 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "localforsure-rest-api", "localforsure-rest-api.csproj", "{BE323CA0-176C-4065-8603-DDB309F8D214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datasource", "..\datasource\datasource.csproj", "{15ECA0BB-121E-40A9-B6BF-5F105ECB670F}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
