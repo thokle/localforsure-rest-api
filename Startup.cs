@@ -15,6 +15,8 @@ namespace localforsure_rest_api
 {
     public class Startup
     {
+        
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +27,15 @@ namespace localforsure_rest_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("https://groccut-ui.azurewebsites.net/?",
+                            "http://www.contoso.com");
+                    });
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -39,7 +50,7 @@ namespace localforsure_rest_api
             {
                 app.UseHsts();
             }
-
+            app.UseCors(MyAllowSpecificOrigins); 
             app.UseHttpsRedirection();
             app.UseMvc();
         }
