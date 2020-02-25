@@ -39,4 +39,4 @@ steps:
     azureSubscription: 'Azure subscription 1(f24adaa1-17fa-4f4b-bde1-10eefd86adb8)'
     appType: 'webApp'
     WebAppName: 'green-api-services'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: 'bin/Debug/'
