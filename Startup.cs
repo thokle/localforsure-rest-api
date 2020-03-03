@@ -33,7 +33,7 @@ namespace localforsure_rest_api
                     builder =>
                     {
                         builder.WithOrigins("https://groccut-ui.azurewebsites.net/?",
-                            "http://www.contoso.com");
+                            "http://www.contoso.com", "http://localhost:3000");
                     });
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
